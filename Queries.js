@@ -85,7 +85,7 @@ db.restaurants.find({'address.street': {$exists: false}})
 // 29. Write a query that selects all the documents in the restaurant collection where the value of the coord field is a Double.
 db.restaurants.find({'address.coord': {$type: 'double'}})
 
-// 30. Escriu una consulta que seleccionarà el restaurant_id, name i grade per a aquells restaurants que retornin 0 com a resta després de dividir el marcador per 7.
+// 30. Write a query that selects the restaurant_id, name, and grade for those restaurants where the remainder after dividing the score by 7 is 0.
 db.restaurants.find({'grades.score': {$mod: [7,0]}}, {restaurant_id: 1, name: 1, grades: 1})
 
 // 31. Write a query to find the restaurant name, borough, longitude, latitude, and cuisine for those restaurants that contain 'mon' as three letters anywhere in their name.
